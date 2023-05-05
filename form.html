@@ -16,7 +16,7 @@
         </p>
       </header>
       <form action="thank.html" id="survey-form">
-        <!-- <div class="form-group">
+        <div class="form-group hidden" >
           <label for="name">Name</label>
           <input
             type="text"
@@ -29,7 +29,7 @@
         </div>
 
 
-        <div class="form-group">
+        <div class="form-group hidden">
           <label for="email">Email</label>
           <input
             type="email"
@@ -43,7 +43,7 @@
 
 
 
-        <div class="form-group">
+        <div class="form-group hidden">
           <label for="phone">Phone Number</label>
           <input
             type="number"
@@ -55,19 +55,18 @@
           />
         </div>
 
-        <div class="form-group">
-          <label for="address"
-            >Address <span class="clue">(optional)</span></label
-          >
-          <input
-            type="text"
-            name="address"
-            id="address"
-            class="formControl"
-            placeholder="Enter your address"
-          />
+        <div class="form-group hidden">
+          <p id="quest">Address</p>
+          <textarea
+            name="feedback"
+            cols="30"
+            rows="3"
+            id="feedback"
+            class="textarea hidden"
+            placeholder="Enter your Address "
+          ></textarea>
         </div>
-      -->
+     
         <div class="form-group hidden">
           <p id="quest">
             Which option best describe your current role in the university
