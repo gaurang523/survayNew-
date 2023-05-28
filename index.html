@@ -16,11 +16,11 @@
           <div class="user-details">
             <div class="input-box hidden">
               <span class="details">Full Name</span>
-              <input type="text" placeholder="Enter your name" required />
+              <input type="text" placeholder="Enter your name" pattern="[A-Za-z\s]+" title="Only alphabets and spaces are allowed" required />
             </div>
             <div class="input-box hidden">
               <span class="details">Username</span>
-              <input type="text" placeholder="Enter your username" required />
+              <input type="text" placeholder="Enter your username" pattern="^\S+$" title="Username cannot contain spaces" required />
             </div>
             <div class="input-box hidden">
               <span class="details">Email</span>
@@ -28,13 +28,18 @@
             </div>
             <div class="input-box hidden">
               <span class="details">Phone Number</span>
-              <input type="tel" placeholder="Enter your number" required />
+              <input type="tel" placeholder="Enter your number" pattern="[0-9]{10}" title="Enter a valid 10-digit mobile number." required />
+              
             </div>
             <div class="input-box hidden">
               <span class="details">Password</span>
               <input
                 type="password"
+                id="password"
                 placeholder="Enter your password"
+                onkeyup="validatePassword()"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" 
+                title="Password must contain at least 8 characters, including one letter, one number, and one special character" 
                 required
               />
             </div>
@@ -42,7 +47,9 @@
               <span class="details">Confirm Password</span>
               <input
                 type="password"
+                id="confirm_password"
                 placeholder="Confirm your password"
+                onkeyup="validatePassword()"
                 required
               />
             </div>
@@ -68,7 +75,7 @@
             </div>
           </div>
           <div class="button">
-            <input type="submit" value="Register" />
+            <input type="submit" id="submit_button" value="Register" disabled/>
           </div>
         </form>
       </div>

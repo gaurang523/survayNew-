@@ -23,25 +23,27 @@
 <!-- * Question ask for name  -->
       <div class="form-group hidden">
         <label for="name">Name</label>
-        <input type="text" type="text" name="name" id="name" class="formControl" placeholder="Enter your name" required>
+        <input type="text" type="text" name="name" id="name" class="formControl" placeholder="Enter your name" pattern="[A-Za-z\s]+" title="Only alphabets and spaces are allowed" required>
       </div>
 <!-- * Question ask for email  -->
       <div class="form-group hidden">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" class="formControl" placeholder="Enter your Email" required>
       </div>
-<!-- * Question ask for phone number -->
+<!-- * Question ask for Roll Number -->
       <div class="form-group hidden">
-        <label for="phone">Phone Number</label>
-        <input type="number" name="phone" id="phone" class="formControl" placeholder="Enter your phone number"
+        <label for="phone">Roll Number</label>
+        <input type="tel" name="rollno" id="rollno" class="formControl" placeholder="Enter your Roll number"
+        pattern="[0-9]{10}" title="Only 10 digit valid Roll Numbers are allowed"
           required />
       </div>
-<!-- * Question ask for address -->
+<!-- * Question ask for address
       <div class="form-group hidden">
         <p id="quest">Address</p>
         <textarea name="feedback" cols="30" rows="3" id="feedback" class="textarea hidden"
           placeholder="Enter your Address "></textarea>
-      </div>
+      </div>  -->
+
 <!-- * Question Which option best describe your current role in the university -->
       <div class="form-group hidden">
         <p id="quest">
@@ -59,23 +61,23 @@
       <div class="form-group hidden">
         <p id="quest">Do you think faculty and support staff at the college were helpful ?</p>
         <label for="" class="hidden">
-          <input type="radio" name="are the staff helpful" class="checkbox" value="front-end-dev" />
+          <input type="radio" name="are the staff helpful" class="checkbox" value="Very helpful" />
           Very helpful
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="are the staff helpful" class="checkbox" value="back-end-dev" />
+          <input type="radio" name="are the staff helpful" class="checkbox" value="Helpful" />
           Helpful
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="are the staff helpful" class="checkbox" value="app-dev" />
+          <input type="radio" name="are the staff helpful" class="checkbox" value=" Neither helpful nor unhelpful" />
           Neither helpful nor unhelpful
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="are the staff helpful" class="checkbox" value="soft-engineering" />
+          <input type="radio" name="are the staff helpful" class="checkbox" value=" Unhelpful" />
           Unhelpful
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="are the staff helpful" class="checkbox" value="other" />
+          <input type="radio" name="are the staff helpful" class="checkbox" value="Very unhelpful" />
           Very unhelpful
         </label>
       </div>
@@ -84,23 +86,23 @@
       <div class="form-group hidden">
         <p id="quest">How likely are you to continue attending this college next year ? </p>
         <label for="" class="hidden">
-          <input type="radio" name="likely to attend again " class="checkbox" value="front-end-dev" />
+          <input type="radio" name="likely to attend again " class="checkbox" value="Extremely likely" />
           Extremely likely
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="likely to attend again " class="checkbox" value="back-end-dev" />
+          <input type="radio" name="likely to attend again " class="checkbox" value="Very likely" />
           Very likely
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="likely to attend again " class="checkbox" value="app-dev" />
+          <input type="radio" name="likely to attend again " class="checkbox" value="Somewhat likely" />
           Somewhat likely
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="likely to attend again " class="checkbox" value="soft-engineering" />
+          <input type="radio" name="likely to attend again " class="checkbox" value="Not so likely" />
           Not so likely
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="likely to attend again " class="checkbox" value="other" />
+          <input type="radio" name="likely to attend again " class="checkbox" value="Not at all likely" />
           Not at all likely
         </label>
       </div>
@@ -109,23 +111,23 @@
       <div class="form-group hidden">
         <p id="quest">How satisfied are you with the accommodation? </p>
         <label for="" class="hidden">
-          <input type="radio" name="satisified with accommodation" class="checkbox" value="front-end-dev" />
+          <input type="radio" name="satisified with accommodation" class="checkbox" value="Extremely satisfied" />
           Extremely satisfied
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="satisified with accommodation" class="checkbox" value="back-end-dev" />
+          <input type="radio" name="satisified with accommodation" class="checkbox" value="Satisfied" />
           Satisfied
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="satisified with accommodation" class="checkbox" value="app-dev" />
+          <input type="radio" name="satisified with accommodation" class="checkbox" value="Neutral" />
           Neutral
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="satisified with accommodation" class="checkbox" value="soft-engineering" />
+          <input type="radio" name="satisified with accommodation" class="checkbox" value="Dissatisfied" />
           Dissatisfied
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="satisified with accommodation" class="checkbox" value="other" />
+          <input type="radio" name="satisified with accommodation" class="checkbox" value=" Extremely dissatisfied" />
           Extremely dissatisfied
         </label>
       </div>
@@ -134,23 +136,23 @@
       <div class="form-group hidden">
         <p id="quest"> Given a chance, are you willing to pursue another course at the college ? </p>
         <label for="" class="hidden">
-          <input type="radio" name="do another corse " class="checkbox" value="front-end-dev" />
+          <input type="radio" name="do another corse " class="checkbox" value=" Definitely, Yes" />
           Definitely, Yes
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="do another corse " class="checkbox" value="back-end-dev" />
+          <input type="radio" name="do another corse " class="checkbox" value="  Probably, Yes" />
           Probably, Yes
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="do another corse " class="checkbox" value="app-dev" />
+          <input type="radio" name="do another corse " class="checkbox" value=" Probably, No" />
           Probably, No
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="do another corse " class="checkbox" value="soft-engineering" />
+          <input type="radio" name="do another corse " class="checkbox" value="Definitely, No" />
           Definitely, No
         </label>
         <label for="" class="hidden">
-          <input type="radio" name="do another corse " class="checkbox" value="other" />
+          <input type="radio" name="do another corse " class="checkbox" value="Can’t say" />
           Can’t say
         </label>
       </div>
